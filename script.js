@@ -32,11 +32,14 @@ function showLoginPrompt() {
     const usernameInput = document.createElement('input');
     usernameInput.setAttribute('type', 'text');
     usernameInput.setAttribute('id', 'username');
-    usernameLine.appendChild(document.createTextNode("Username: "));
     usernameLine.appendChild(usernameInput);
     terminal.appendChild(usernameLine);
 
     usernameInput.focus();
+
+    const usernameLabel = document.createElement('div');
+    usernameLabel.textContent = "Username: ";
+    terminal.insertBefore(usernameLabel, usernameInput);
 
     usernameInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
@@ -50,11 +53,14 @@ function showPasswordPrompt() {
     const passwordInput = document.createElement('input');
     passwordInput.setAttribute('type', 'password');
     passwordInput.setAttribute('id', 'password');
-    passwordLine.appendChild(document.createTextNode("Password: "));
     passwordLine.appendChild(passwordInput);
     terminal.appendChild(passwordLine);
 
     passwordInput.focus();
+
+    const passwordLabel = document.createElement('div');
+    passwordLabel.textContent = "Password: ";
+    terminal.insertBefore(passwordLabel, passwordInput);
 
     passwordInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
