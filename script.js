@@ -11,8 +11,7 @@ const bootSequence = [
     "",
     "**Foundation_RAISA System Boot Complete**",
     "",
-    "**Please Log In**",
-    "Username: ",
+    "**Please Log In**"
 ];
 
 let currentIndex = 0;
