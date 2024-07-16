@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const terminal = document.getElementById('terminal');
-    // Remove the reference to 'logo'
     
     const bootSequence = [
         "**Terminal Boot Sequence Initiated**",
@@ -14,27 +13,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         "**Foundation_RAISA System Boot Complete**",
         "",
         "**Please Log In**"
-    ];
-    
-    const codes = [
-        "Loading kernel modules...",
-        "Initializing hardware...",
-        "Configuring network interfaces...",
-        "Starting system logger...",
-        "Mounting filesystems...",
-        "Starting RAID monitoring services...",
-        "Initializing random number generator...",
-        "Checking battery status...",
-        "Starting system message bus...",
-        "Loading security policies...",
-        "Loading user settings...",
-        "Starting web services...",
-        "Updating database connections...",
-        "Initializing AI modules...",
-        "Performing security checks...",
-        "Starting virtual machine monitor...",
-        "Initializing encryption services...",
-        "Launching main interface..."
     ];
     
     let currentIndex = 0;
@@ -103,16 +81,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const grantedLine = document.createElement('div');
         grantedLine.textContent = "**Access Granted**";
         terminal.appendChild(grantedLine);
-    
-        // Play access granted audio
-        const audio = new Audio('https://docs.google.com/uc?export=download&id=1rFn8lbonI5X3uMvTentaxftwEfc_Gxdp');
-        audio.play();
-    
-        // showLogo(); // Remove this line if logo display isn't needed
+
         showDcbPrompt();
     }
-    
-    // Remove the showLogo() function and its related code
     
     function showDcbPrompt() {
         const dcbLine = document.createElement('div');
