@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const terminal = document.getElementById('terminal');
-    const logo = document.getElementById('logo');
+    // Remove the reference to 'logo'
     
     const bootSequence = [
         "**Terminal Boot Sequence Initiated**",
@@ -108,20 +108,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const audio = new Audio('https://docs.google.com/uc?export=download&id=1rFn8lbonI5X3uMvTentaxftwEfc_Gxdp');
         audio.play();
     
-        showLogo();
+        // showLogo(); // Remove this line if logo display isn't needed
+        showDcbPrompt();
     }
     
-    function showLogo() {
-        terminal.style.display = 'none';
-        logo.style.display = 'block';
-    
-        setTimeout(showDcbPrompt, 3000);
-    }
+    // Remove the showLogo() function and its related code
     
     function showDcbPrompt() {
-        logo.style.display = 'none';
-        terminal.style.display = 'block';
-    
         const dcbLine = document.createElement('div');
         dcbLine.textContent = "Type 'Print Out DCB' or 'Open DCB' to continue:";
         terminal.appendChild(dcbLine);
@@ -192,4 +185,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 terminal.appendChild(infoLine);
                 info[key].forEach(item => {
                     const itemLine = document.createElement('div');
-                    itemLine.text
+                    itemLine.textContent = item;
+                    terminal.appendChild(itemLine);
+                });
+            } else {
+                infoLine.textContent = `${key}: ${info[key]}`;
+                terminal.appendChild(infoLine);
+            }
+        }
+    }
+    
+    // Start the boot sequence
+    printNextLine();
+});
