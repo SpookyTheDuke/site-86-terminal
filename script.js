@@ -1,4 +1,5 @@
 const terminal = document.getElementById('terminal');
+const logo = document.getElementById('logo');
 
 const bootSequence = [
     "**Terminal Boot Sequence Initiated**",
@@ -12,6 +13,27 @@ const bootSequence = [
     "**Foundation_RAISA System Boot Complete**",
     "",
     "**Please Log In**"
+];
+
+const codes = [
+    "Loading kernel modules...",
+    "Initializing hardware...",
+    "Configuring network interfaces...",
+    "Starting system logger...",
+    "Mounting filesystems...",
+    "Starting RAISA monitoring services...",
+    "Initializing Memetic Kill Agent generator...",
+    "Checking battery status...",
+    "Starting system message bus...",
+    "Loading security policies...",
+    "Loading user settings...",
+    "Starting web services...",
+    "Updating database connections...",
+    "Initializing AI modules...",
+    "Performing security checks...",
+    "Starting virtual machine monitor...",
+    "Initializing encryption services...",
+    "Launching main interface..."
 ];
 
 let currentIndex = 0;
@@ -81,6 +103,20 @@ function accessGranted() {
     grantedLine.textContent = "**Access Granted**";
     terminal.appendChild(grantedLine);
 
+    showLogo();
+}
+
+function showLogo() {
+    terminal.style.display = 'none';
+    logo.style.display = 'block';
+
+    setTimeout(showDcbPrompt, 3000);
+}
+
+function showDcbPrompt() {
+    logo.style.display = 'none';
+    terminal.style.display = 'block';
+
     const dcbLine = document.createElement('div');
     dcbLine.textContent = "Type 'DCB' to continue:";
     terminal.appendChild(dcbLine);
@@ -105,4 +141,16 @@ function accessGranted() {
     });
 }
 
-printNextLine();
+function printCodes() {
+    codes.forEach((code, index) => {
+        setTimeout(() => {
+            const line = document.createElement('div');
+            line.textContent = code;
+            terminal.appendChild(line);
+        }, index * 300);
+    });
+
+    setTimeout(printNextLine, codes.length * 300);
+}
+
+printCodes();
