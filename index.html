@@ -3,42 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site-86 Terminal</title>
+    <title>DCB Terminal</title>
     <style>
         body {
             background-color: black;
             color: green;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 18px;
+            font-family: monospace;
+            padding: 20px;
         }
         #terminal {
-            width: 80%;
-            margin: auto;
-            margin-top: 50px;
+            display: block;
+        }
+        #logo {
+            display: none;
+            text-align: center;
         }
         input {
             background-color: black;
             color: green;
             border: none;
-            font-family: inherit;
-            font-size: inherit;
             outline: none;
-        }
-        #logo {
-            display: none;
-            width: 100%;
-            text-align: center;
-        }
-        #logo img {
-            width: 200px;
-            height: 200px;
+            font-family: monospace;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <div id="terminal"></div>
     <div id="logo">
-        <img src="image.png" alt="Site-86 Logo">
+        <img src="path/to/your/logo.png" alt="Logo" />
     </div>
     <script src="script.js"></script>
 </body>
