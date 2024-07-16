@@ -300,7 +300,3 @@ function printCodes() {
 }
 
 printCodes();
-
-}
-
-printCodes();
