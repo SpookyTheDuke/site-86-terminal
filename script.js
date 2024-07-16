@@ -29,10 +29,10 @@ function printNextLine() {
 
 function showLoginPrompt() {
     const usernameLine = document.createElement('div');
+    usernameLine.textContent = "Username: ";
     const usernameInput = document.createElement('input');
     usernameInput.setAttribute('type', 'text');
     usernameInput.setAttribute('id', 'username');
-    usernameLine.appendChild(document.createTextNode("Username: "));
     usernameLine.appendChild(usernameInput);
     terminal.appendChild(usernameLine);
 
@@ -47,10 +47,10 @@ function showLoginPrompt() {
 
 function showPasswordPrompt() {
     const passwordLine = document.createElement('div');
+    passwordLine.textContent = "Password: ";
     const passwordInput = document.createElement('input');
     passwordInput.setAttribute('type', 'password');
     passwordInput.setAttribute('id', 'password');
-    passwordLine.appendChild(document.createTextNode("Password: "));
     passwordLine.appendChild(passwordInput);
     terminal.appendChild(passwordLine);
 
