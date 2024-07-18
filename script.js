@@ -11,8 +11,7 @@ const bootSequence = [
     "",
     "**Foundation_RAISA System Boot Complete**",
     "",
-    "**Please Log In**",
-    "Username: ",
+    "**Please Log In**"
 ];
 
 let currentIndex = 0;
@@ -86,7 +85,7 @@ function accessGranted() {
     audio.play();
 
     const optionsLine = document.createElement('div');
-    optionsLine.textContent = "Type 'Print Out DCB' or 'Open DCB' and press Enter:";
+    optionsLine.textContent = "Type 'Print Out DCB' or 'Open DCB' to continue:";
     terminal.appendChild(optionsLine);
 
     const commandInput = document.createElement('input');
@@ -121,6 +120,7 @@ Full Name: Berry White
 DOB: 05/19/1995
 Department: Alpha-1 'Red Right Hand', Former Mu-4 'Debuggers', Former NTF NCO and IST Guard
 Rank: Operative
+
 Character Description: Operative 'Zeus' is a well-organized and mannered individual, originally from Site-██ as Security Personnel, came from a regular background and history whilst working at the Foundation until one day, a Nine-Tailed Fox recruitment came to his Site and afterwards is history with several years of experience following, missions and stationary tasks alike. Operative 'Chip' is a Caucasian Male, originating from North America in his hometown of ██████, with a fairly unique blood-type but average looks, with Black Hair and Blue Eyes.
 
 Character Impactful Events:
